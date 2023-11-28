@@ -1,0 +1,16 @@
+.login_img{
+    height: 550px;
+    margin-left: 50px;
+}
+.secondd{
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+.secondd:focus {
+    outline: 2px solid red; /* Set a custom outline style on focus */
+}

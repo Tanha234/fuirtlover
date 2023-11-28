@@ -1,0 +1,44 @@
+.back {
+    height: 650px;
+    background-color: #afe1af42;
+    margin: 10px;
+}
+.textt{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkgreen;
+    font-size: 43px;
+    font-weight: 400;
+  
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    margin-top: 250px;
+    width: 700px;
+}
+.img-2{
+    margin-right: 622px;
+    margin-left: 502px;
+  
+}
+span{
+    color: rgb(1, 15, 1);
+}
+.img10{
+    width: 550px;
+    
+}
+.font-fix{
+    font-family:monospace;
+    color: darkgreen;
+  padding-top: 150px;
+  margin-left: 140px;
+  padding-left: 100px;
+
+  font-size: 40px;
+}
+.img12{
+    width: 120px;
+    height: 100px;
+} 
+.backk{
+    background-color: rgb(212, 233, 218);
+}
