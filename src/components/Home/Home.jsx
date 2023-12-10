@@ -1,10 +1,17 @@
 /* eslint-disable no-unused-vars */
+
+import { AOS } from 'aos';
 import React from 'react';
+import { useEffect } from 'react';
+
 import { Card, Col, Row } from 'react-bootstrap';
 import './Home.css'
 
+
 const Home = () => {
+ 
     return (
+      
         <div>
               <Row className='mx-5  back '>
            <Col className=''>
@@ -15,7 +22,9 @@ const Home = () => {
            <Row>
            <Col>
           
-               <h1 className='textt'>Explore Natures Palette: Discover the <span>Vibrant World of Fruits </span> </h1>
+               <h1 className='textt'
+     
+     >Explore Natures Palette: Discover the <span>Vibrant World of Fruits </span> </h1>
                </Col>
                <Col className="ps-5 ms-5">
             
@@ -29,7 +38,9 @@ const Home = () => {
            </Col>
           
        </Row>
-       <h1   className='text-center font-fix'>Top Favorite Fruits</h1>
+       <h1   className=' font-fix'
+    >
+Top Favorite Fruits</h1>
        <Row style={{ marginLeft:'150px'}} className="pb-5 ">
            
          

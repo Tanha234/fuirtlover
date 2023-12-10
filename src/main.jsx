@@ -15,6 +15,8 @@ import Registration from './components/Resgistrartion/Registrartion';
 import PrivateRoute from './components/PrivateRoute';
 import Contact from './components/Contact/Contact';
 import ImageUpload from './components/ImageUpload/ImageUpload';
+import User from './components/User/User';
+// import User from './components/User/User';
 
 
 
@@ -44,7 +46,11 @@ const router = createBrowserRouter([
         path: "/upload",
         element:<ImageUpload/>,
       },
-     
+      {
+        path: "/user",
+        element:<User/>,
+        loader:()=>fetch('http://localhost:5000/upload')
+      },
       {
         path: "/contact",
         element:<PrivateRoute><Contact/></PrivateRoute>
