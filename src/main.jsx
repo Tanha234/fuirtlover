@@ -12,10 +12,12 @@ import {
 } from "react-router-dom";
 import AuthProvider from './components/AuthProvider';
 import Registration from './components/Resgistrartion/Registrartion';
-import PrivateRoute from './components/PrivateRoute';
+// import PrivateRoute from './components/PrivateRoute';
 import Contact from './components/Contact/Contact';
 import ImageUpload from './components/ImageUpload/ImageUpload';
 import User from './components/User/User';
+import RestApi from './components/RestApi/RestApi';
+import TranslatorComponent from './components/TranslatorComponent ';
 // import User from './components/User/User';
 
 
@@ -47,13 +49,21 @@ const router = createBrowserRouter([
         element:<ImageUpload/>,
       },
       {
+        path: "/rest",
+        element:<RestApi/>,
+      },
+      {
+        path: "/res",
+        element:<TranslatorComponent/>,
+      },
+      {
         path: "/user",
         element:<User/>,
-        loader:()=>fetch('http://localhost:5000/upload')
+        loader:()=>fetch('http://localhost:5001/upload')
       },
       {
         path: "/contact",
-        element:<PrivateRoute><Contact/></PrivateRoute>
+        element:<Contact/>
       },
     ],
   },

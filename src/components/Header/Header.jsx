@@ -39,7 +39,7 @@ const Header = () => {
           <Nav className="me-auto nav">
             <Nav.Link href="/" className='fs-5'>Home</Nav.Link>
             <Nav.Link href="/registration" className='fs-5 mx-2'>Features</Nav.Link>
-            <Nav.Link href="#pricing" className='fs-5 mx-2'>Identify Fruit</Nav.Link>
+            <Nav.Link href="/upload" className='fs-5 mx-2'>Identify Fruit</Nav.Link>
             <Nav.Link href="/contact" className='fs-5 mx-2'>Contact</Nav.Link>
             <NavDropdown title="User?" className='fs-5' id="navbarScrollingDropdown">
               <NavDropdown.Item href="/registration" className='fs-5'>Sign Up</NavDropdown.Item>

@@ -1,11 +1,21 @@
 import { useState } from 'react';
-
+import { Col, Row } from 'react-bootstrap';
+// import { useNavigate } from 'react-router-dom';
 const ImageUpload = () => {
-  const [imageURL, setImageURL] = useState('');
+  const defaultImage = './../../../images/cum.jpg'; // Set your default image path
+  const [imageURL, setImageURL] = useState(defaultImage);
+  // const navigate = useNavigate();
+
+  const sumbitButton=()=>{
+    alert("Are you sure for uploading?");
+    // navigate('/user');
+
+
+  }
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    
+
     const name = event.target.elements.name.value;
     const imageInput = event.target.elements.image;
 
@@ -20,9 +30,9 @@ const ImageUpload = () => {
         const user = { name, image: imageDataURL };
         console.log(user);
 
-        // Now you can send 'user' object to the server
+      
 
-        fetch('http://localhost:5000/upload', {
+        fetch('http://localhost:5001/upload', {
           method: 'POST',
           headers: {
             'content-type': 'application/json',
@@ -32,9 +42,10 @@ const ImageUpload = () => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            if(data.insertedId){
-              alert("Inserted Sucessfully");
-              user.reset()
+            if (data.insertedId) {
+              alert('Inserted Successfully');
+              event.target.reset();
+              setImageURL(defaultImage); // Reset to the default image after successful upload
             }
           });
       };
@@ -48,12 +59,29 @@ const ImageUpload = () => {
 
   return (
     <div>
-      <form onSubmit={handleFormSubmit}>
-        <input type="text" name="name" id="name" />
-        <input type="file" name="image" id="image" accept="image/png,image/gif,image/jpg,image/jpeg" />
-        {imageURL && <img src={imageURL} alt="Selected" style={{ maxWidth: '100%', maxHeight: '100px' }} />}
-        <button type="submit">Upload</button>
-      </form>
+      <Row>
+        
+        <Col className='ps-5 ms-5'>
+   
+          <img className='mt-5 pt-5 me-5 pe-5 img10' src='../../../images/imk.png' alt="Default" />
+          <h1 style={{color:'green',fontFamily:'cursive',fontSize:'30px'}} className="text py-4 ms-3">Select an image for identification</h1>
+        </Col>
+        <Col style={{ marginTop: '50px' }}>
+        
+          <form onSubmit={handleFormSubmit}>
+            <Row>
+              {imageURL && <img src={imageURL} alt="Selected" style={{ maxWidth: '50%', maxHeight: '500px', marginBottom: '50px',marginLeft:'130px',marginTop:'90px' }} />}
+            </Row>
+
+            <input type="text" name="name" id="name" />
+            <input type="file" name="image" id="image" accept="image/png,image/gif,image/jpg,image/jpeg" />
+
+            <button onClick={sumbitButton}  style={{height:'32px',width:'250px',backgroundColor:'#355e3b',color:'white'}}type="submit">
+              Upload
+            </button>
+          </form>
+        </Col>
+      </Row>
     </div>
   );
 };

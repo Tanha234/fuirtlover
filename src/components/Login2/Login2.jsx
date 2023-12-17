@@ -16,6 +16,8 @@ const Login2 = () => {
   const [error, setError] = useState('');
   const [isEmailVerified, setIsEmailVerified] = useState(false);
   const emailRef=useState();
+   //private route
+   const form=location.state?.form?.pathname||'/';
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -40,7 +42,8 @@ const Login2 = () => {
           setSuccess('Successfully logged in');
           setError('');
           event.target.reset();
-          navigate('/');
+          navigate(form,{replace:true});
+          // navigate('/');
         })
         .catch((error) => {
           setError('Login failed. ');
