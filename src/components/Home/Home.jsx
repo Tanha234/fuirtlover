@@ -5,11 +5,10 @@ import React from 'react';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { Card, Col, Row } from 'react-bootstrap'; // Update this line
+import './Home.css';
+import { Carousel } from 'react-bootstrap'; // Add this line
 
-
-import { Card, Col, Row } from 'react-bootstrap';
-import './Home.css'
-import { Carousel } from 'bootstrap';
 
 
 const Home = () => {
@@ -354,34 +353,44 @@ Top Favorite Fruits</h1>
          </Col>
        </Row>
        <Row>
-         <h2 className='text-center pt-5'>Customers Review</h2>
-         <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/800x400"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>Caption 1</h3>
-          <p>Description for the first slide.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/800x400"
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h3>Caption 2</h3>
-          <p>Description for the second slide.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      {/* Add more Carousel.Items for additional slides */}
-    </Carousel>
-         
-       </Row>
+        <h2 className='text-center pt-5'>Customers Review</h2>
+        <Carousel>
+          <Carousel.Item>
+            <img
+              className="d-block w-25 mx-auto"
+              src="../../../images/6102-08952036en_Masterfile.jpg"
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>Customer Review 1</h3>
+              <p>Description for the first slide.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-25 mx-auto"
+              src="../../../images/18562160-fresh-fruits-with-water-splash-isolated-on-white-removebg-preview.png"
+              alt="Second slide"
+            />
+            <Carousel.Caption>
+              <h3 style={{marginTop:'1400px'}}>Customer Review 2</h3>
+              <p>Description for the second slide.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-25 mx-auto"
+              src="../../../images/18562160-fresh-fruits-with-water-splash-isolated-on-white-removebg-preview.png"
+              alt="Third slide"
+            />
+            <Carousel.Caption>
+              <h3>Customer Review 3</h3>
+              <p>Description for the third slide.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          {/* Add more Carousel.Items for additional slides */}
+        </Carousel>
+      </Row>
 
         </div>
     );
