@@ -63,13 +63,13 @@ const ImageUpload = () => {
         
         <Col className='ps-5 ms-5'>
    
-          <img className='mt-5 pt-5 me-5 pe-5 img10' src='../../../images/imk.png' alt="Default" />
-          <h1 style={{color:'green',fontFamily:'cursive',fontSize:'30px'}} className="text py-4 ms-3">Select an image for identification</h1>
+          <img className='mt-5 pt-5 me-5 pe-5 img10 w-75' src='../../../images/imk.png' alt="Default" />
+          <h1 style={{color:'green',fontFamily:'cursive',fontSize:'30px'}} className="text ms-5">Select an image for identification</h1>
         </Col>
         <Col style={{ marginTop: '50px' }}>
         
           <form onSubmit={handleFormSubmit}>
-            <Row>
+            <Row className="pt-5 mt-5">
               {imageURL && <img src={imageURL} alt="Selected" style={{ maxWidth: '50%', maxHeight: '500px', marginBottom: '50px',marginLeft:'130px',marginTop:'90px' }} />}
             </Row>
 

@@ -2,9 +2,12 @@
 
 import { AOS } from 'aos';
 import React from 'react';
+import CardGroup from 'react-bootstrap/CardGroup';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faTelegram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
 import { Card, Col, Row } from 'react-bootstrap'; // Update this line
 import './Home.css';
 import { Carousel } from 'react-bootstrap'; // Add this line
@@ -293,7 +296,7 @@ Top Favorite Fruits</h1>
 
        {/* how it works */}
 
-       <Row  className="mx-5 px-5 g-1" style={{backgroundColor:' #afe1af42'}}>
+       <Row  className="mx-5 px-5 g-1 pt-5 mt-5 " style={{backgroundColor:' #afe1af42'}}>
          <Col className="ms-4">
          <Row>
            
@@ -316,6 +319,7 @@ Top Favorite Fruits</h1>
          <Col className='ps-1'>
          <h1 className='pt-4 mt-5 text-primary'>How it works?</h1>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta delectus ad dolores similique tempora porro eligendi ipsam unde, ratione sit. Deleniti modi laboriosam quibusdam quaerat rem non illum hic, ex quae ut iste veritatis autem esse, assumenda distinctio mollitia pariatur qui nam, cum earum eos minus vel quo. Rerum?</p>
+         
          <Row>
            <Col className='d-flex'>
          <img style={{width:'40px'}} className=' ' src='./../../../images/ttt.png'></img>
@@ -342,58 +346,162 @@ Top Favorite Fruits</h1>
 
        {/* About us */}
        <Row style={{marginLeft:'300px'}}className=''>
-         <h1 className='pt-5 mt-5 text-danger'>About Us</h1>
-         <Col>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias ipsam aliquam ut aspernatur natus quaerat possimus tempore iure! Impedit quia obcaecati repellendus non earum saepe reprehenderit enim sed incidunt voluptatem? Corrupti molestiae consectetur tenetur earum cum sunt fugiat, nesciunt eum, repellat temporibus exercitationem, dolorem laboriosam aliquam in nostrum. Incidunt dicta error unde repellat, cupiditate ullam fugiat ab est beatae minima vitae?</p>
+         <h1 className='pt-5 mt-5 text-danger pb-5'>About Us</h1>
+         <Col className='md-8'>
+         <p className='fs-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias ipsam aliquam ut aspernatur natus quaerat possimus tempore iure! Impedit quia obcaecati repellendus non earum saepe reprehenderit enim sed incidunt voluptatem? Corrupti molestiae consectetur tenetur earum cum sunt fugiat, nesciunt eum, repellat temporibus exercitationem, dolorem laboriosam aliquam in nostrum. Incidunt dicta error unde repellat, cupiditate ullam fugiat ab est beatae minima vitae?</p>
          </Col>
-         <Col>
-         <img style={{width:'500px', marginLeft:'200px'}} className=' ' src='./../../../images/istockphoto-1194994154-612x612.jpg'></img>
+         <Col className='md-4'>
+         <img style={{width:'500px', marginLeft:'150px'}} className=' ' src='./../../../images/6-Capture0053-75-2-600x600.jpg'></img>
          </Col>
          <Col>
          </Col>
        </Row>
-       <Row>
-        <h2 className='text-center pt-5'>Customers Review</h2>
-        <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-25 mx-auto"
-              src="../../../images/6102-08952036en_Masterfile.jpg"
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>Customer Review 1</h3>
-              <p>Description for the first slide.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-25 mx-auto"
-              src="../../../images/18562160-fresh-fruits-with-water-splash-isolated-on-white-removebg-preview.png"
-              alt="Second slide"
-            />
-            <Carousel.Caption>
-              <h3 style={{marginTop:'1400px'}}>Customer Review 2</h3>
-              <p>Description for the second slide.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-25 mx-auto"
-              src="../../../images/18562160-fresh-fruits-with-water-splash-isolated-on-white-removebg-preview.png"
-              alt="Third slide"
-            />
-            <Carousel.Caption>
-              <h3>Customer Review 3</h3>
-              <p>Description for the third slide.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          {/* Add more Carousel.Items for additional slides */}
-        </Carousel>
+      <Row className='mx-auto px-5'>
+        <h2 className='text-center pt-5 mt-5 pb-5 fs-1 text-primary'>Our Freatures</h2>
+
+        
+        
+
+        
+
+
+        <Col style={{backgroundColor:'   rgb(150, 197, 150)'}} className=' mx-5 px-5'>
+     
+     <img style={{width:'170px',marginLeft:'60px'}} className='pt-5 ' src='./../../../images/rr.png'></img>
+     
+      <h5 className='pt-2 text-white '>Upload & detect fruit name </h5>
+     
+     
+     </Col>
+     
+        <Col style={{backgroundColor:'   rgb(150, 197, 150)'}} className=' mx-5 px-5'>
+     
+        <img style={{width:'80px',marginLeft:'90px'}} className='pt-5 mt-5 ' src='./../../../images/1574972-removebg-preview.png'></img>
+        
+         <h5 className='pt-5 text-white text-center'>Learn  Nuitrtion about fruits </h5>
+        
+        
+        </Col>
+        <Col style={{backgroundColor:'   rgb(150, 197, 150)'}} className=' mx-5 px-5'>
+     
+        <img style={{width:'110px',marginLeft:'100px'}} className=' pt-5 mt-5 pe-3' src='./../../../images/bas.png'></img>
+         <h5 className='pt-4 text-white text-center'>Preservation fruits </h5>
+        </Col>
+        <Col style={{backgroundColor:'   rgb(150, 197, 150)',borderColor:'blue'}} className=' mx-5 px-5'>
+     
+        <img style={{width:'100px',marginLeft:'90px'}} className='pt-5 mt-5 ' src='./../../../images/eed.png'></img>
+         <h5 className='pt-4 text-white text-center'>Contact with nutritionist</h5>
+        </Col>
+        
       </Row>
 
-        </div>
-    );
+      <Row className='mx-5 px-auto mt-5 '>
+        <h2 className='text-center text-danger pt-5 mt-5 pb-5 mb-5 fs-1'>Customers Review</h2>
+        <CardGroup className='container-fluid mx-auto'>
+      <Card className='mx-3 w-50 border-0 '>
+        <Card.Img  class="rounded-img " src="../../../images/man5.jpg" rounded />
+     
+ 
+        <Card.Body>
+          <Card.Title className='text-center text-primary fs-2' >Evan Olsen</Card.Title>
+          <Card.Text className='text-center px-5 pb-4'>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer
+<br/>
+<br/>
+
+     <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px',marginTop:'3' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'green', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'green', marginRight: '10px' }} />
+        
+          </Card.Text>
+        </Card.Body>
+       
+      </Card>
+     
+      <Card className='mx-3 w-50 border-0 '>
+        <Card.Img  class="rounded-img " src="../../../images/man3.jpg" rounded />
+     
+ 
+        <Card.Body>
+          <Card.Title className='text-center text-primary fs-2' >Umama Usah</Card.Title>
+          <Card.Text className='text-center px-5'>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer
+            <br/>
+
+
+            <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px',marginTop:'30px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'green', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'green', marginRight: '10px' }} />
+        
+          </Card.Text>
+        </Card.Body>
+       
+      </Card>
+      <Card className='mx-3 w-50 border-0 '>
+        <Card.Img  class="rounded-img " src="../../../images/man2.jpg" rounded />
+     
+ 
+        <Card.Body>
+          <Card.Title className='text-center text-primary fs-2' >Afran Soda</Card.Title>
+          <Card.Text className='text-center px-5'>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer
+            <br/>
+
+
+            <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px',marginTop:'30px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'green', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'orange', marginRight: '10px' }} />
+        <FontAwesomeIcon icon={faStar} style={{ fontSize: '17px', color: 'green', marginRight: '10px' }} />
+        
+          </Card.Text>
+        </Card.Body>
+       
+      </Card>
+    </CardGroup>
+      </Row>
+{/* footer */}
+
+<Row className="imff pt-5 mt-5">
+  {/* <h2>Fruit Lover</h2> */}
+
+  <p style={{ marginLeft: '919px', color: 'blue', paddingTop: '30px',fontSize:'22px' }}>Follow Us</p>
+
+  <div style={{ marginLeft: '890px' }}>
+    <FontAwesomeIcon icon={faFacebook} style={{ fontSize: '30px', margin: '5px', color: 'blue' }} />
+    <FontAwesomeIcon icon={faInstagram} style={{ fontSize: '30px', margin: '5px', color: 'purple' }} />
+    <FontAwesomeIcon icon={faTelegram} style={{ fontSize: '30px', margin: '5px', color: 'sky' }} />
+    <FontAwesomeIcon icon={faYoutube} style={{ fontSize: '30px', margin: '5px', color: 'red' }} />
+  </div>
+
+  <p style={{ color: 'black', marginLeft: '890px' }}>Info Support Marketing</p>
+  <p style={{ color: 'black', marginLeft: '875px' }}>Terms of use Privacy Policy</p>
+  <p style={{ color: 'black', marginLeft: '895px' }}>&copy; 2023, FruitLover</p>
+</Row>
+</div>
+  );
 };
+    
+    
+
 
 export default Home;

@@ -43,7 +43,7 @@ const Login2 = () => {
           setError('');
           event.target.reset();
           navigate(form,{replace:true});
-          // navigate('/');
+          navigate('/contact');
         })
         .catch((error) => {
           setError('Login failed. ');

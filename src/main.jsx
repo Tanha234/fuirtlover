@@ -16,8 +16,17 @@ import Registration from './components/Resgistrartion/Registrartion';
 import Contact from './components/Contact/Contact';
 import ImageUpload from './components/ImageUpload/ImageUpload';
 import User from './components/User/User';
-import RestApi from './components/RestApi/RestApi';
+
+import Fruits from './components/Fruits/Fruits';
+import Seasonal from './components/Seasonal';
+import January from './components/January';
+import February from './components/Months/February';
+import March from './components/Months/March';
+import April from './components/Months/April';
+import May from './components/Months/May';
+import Fruitsandwater from './components/fruitsandwater';
 import TranslatorComponent from './components/TranslatorComponent ';
+
 // import User from './components/User/User';
 
 
@@ -46,16 +55,42 @@ const router = createBrowserRouter([
       },
       {
         path: "/upload",
-        element:<ImageUpload/>,
+        element:<ImageUpload/>
       },
       {
         path: "/rest",
-        element:<RestApi/>,
+        element:<Fruitsandwater/>,
       },
       {
-        path: "/res",
-        element:<TranslatorComponent/>,
+        path: "/fruit",
+        element:<Fruits/>,
       },
+      {
+        path: "/season",
+        element:<Seasonal/>,
+      },
+      {
+        path: "/jan",
+        element:<January/>,
+      },
+      {
+        path: "/feb",
+        element:<February/>,
+      },
+      {
+        path: "/mar",
+        element:<March/>,
+      },
+      {
+        path: "/apr",
+        element:<April/>,
+      },
+      {
+        path: "/may",
+        element:<May/>,
+      },
+     
+     
       {
         path: "/user",
         element:<User/>,
@@ -63,7 +98,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element:<Contact/>
+        element:<Contact></Contact>
+      },
+      {
+        path: "/tan",
+        element:<TranslatorComponent/>
       },
     ],
   },

@@ -29,7 +29,7 @@ const Header = () => {
       {/* <Link to="/registration">Signup</Link>
       {user && <span>{user.email}</span>}
       {user && <Button onClick={signnOut}>Sign Out</Button>} */}
-         <Navbar  data-bs-theme="light" className='py-4 ps-5 navi'>
+         <Navbar  className='py-4 ps-5 navi sticky'>
       
           <Navbar.Brand >
           <div>
@@ -38,7 +38,20 @@ const Header = () => {
           </Navbar.Brand>
           <Nav className="me-auto nav">
             <Nav.Link href="/" className='fs-5'>Home</Nav.Link>
-            <Nav.Link href="/registration" className='fs-5 mx-2'>Features</Nav.Link>
+            
+            <NavDropdown title="Fruits" className='fs-5 mx-2' id="navbarScrollingDropdown">
+            <NavDropdown.Item href="/fruit" className='fs-5'>About Fruits</NavDropdown.Item>
+              <NavDropdown.Item href="/season" className='fs-5'>
+                Seasonal Fruits
+              </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown title="Activites" className='fs-5 mx-2' id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/rest" className='fs-5'>Calculate Nuitrition</NavDropdown.Item>
+              
+              <NavDropdown.Item href="/tan" className='fs-5'>
+               Games
+              </NavDropdown.Item>
+              </NavDropdown>
             <Nav.Link href="/upload" className='fs-5 mx-2'>Identify Fruit</Nav.Link>
             <Nav.Link href="/contact" className='fs-5 mx-2'>Contact</Nav.Link>
             <NavDropdown title="User?" className='fs-5' id="navbarScrollingDropdown">

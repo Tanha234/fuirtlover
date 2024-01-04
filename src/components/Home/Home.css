@@ -44,3 +44,21 @@ span{
 .backk{
     background-color: rgb(212, 233, 218);
 }
+
+.rounded-img {
+    border-radius:50%; /* Adjust the border-radius as needed */
+    width:250px;
+    margin-left: 190px;
+    margin-top: 50px;
+    height: 190px;
+  }
+  .imff {
+    background-image: url('https://i.pinimg.com/736x/0b/ac/7d/0bac7d5999fab3a72a033fcbd037fc7d.jpg');
+    height: 300px;
+    margin-top: 50px;
+    background-repeat: no-repeat;
+    width: 2000px; /* Adjust this value to your desired width */
+    background-position: center; /* Use 'center' to center the background image horizontally */
+    background-size: cover; /* Use 'cover' to make sure the background image covers the entire width */
+  }
+  

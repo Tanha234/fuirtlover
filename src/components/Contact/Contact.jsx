@@ -16,14 +16,12 @@ const Contact = () => {
         </Row>
         <h1 style={{color:'green',fontFamily:'cursive'}} className="text py-4">Contact Us</h1>
         <Col>
-        <form
-  action="https://formspree.io/f/myyrgkkr"
+     
+          <form
+  action="https://formspree.io/f/mayrypww"
   method="POST"
 >
-          
-
-
-  <input  className="w-75 mb-4 py-2" type="text" name="" placeholder="Enter Your Name" id="" />
+<input  className="w-75 mb-4 py-2" type="text" name="" placeholder="Enter Your Name" id="" />
               <br/>
              
        
@@ -34,10 +32,17 @@ const Contact = () => {
               <br/>
              
               <br/>
+              {/* <br/>
               <textarea style={{height:'200px'}} className="w-75 "name="Message" placeholder="Message" form="usrform" required></textarea>
-              <br/>
-  <input className='mt-3' style={{height:'40px',width:'250px',backgroundColor:'#355e3b',color:'white'}} type="submit"/>
-          </form>
+              <br/> */}
+              <label>
+    Your message:
+    <br/>
+    <textarea style={{height:'200px',width:'800px'}}name="message"></textarea>
+  </label>
+ 
+  <button style={{height:'40px',width:'250px',backgroundColor:'#355e3b',color:'white'}} type="submit">Submit</button>
+</form>
           </Col>
       </div>
       </div>
