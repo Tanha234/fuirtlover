@@ -20,6 +20,8 @@ const Home = () => {
       
         <div>
               <Row className='mx-5  back '>
+
+                
            <Col className='imo'>
            {/* <img className=' ' src='./../../../images/img11.png'></img> */}
            <img className='mt-5 pt-5 img10' src='./../../../images/DSC_7799-removebg-preview.png'></img>

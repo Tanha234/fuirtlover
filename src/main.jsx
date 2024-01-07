@@ -27,7 +27,8 @@ import May from './components/Months/May';
 import Fruitsandwater from './components/fruitsandwater';
 import TranslatorComponent from './components/TranslatorComponent ';
 import AnimatedText from './components/Animated';
-import Tutorial from './components/Tutorial';
+
+import FruitDetail from './components/FruitDetail';
 
 // import User from './components/User/User';
 
@@ -92,8 +93,8 @@ const router = createBrowserRouter([
         element:<May/>,
       },
      {
-       path:'/tutorial',
-       element:<Tutorial/>,
+       path:'/tut',
+       element:<FruitDetail/>,
      },
      
       {

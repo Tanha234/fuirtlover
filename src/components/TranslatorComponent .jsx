@@ -111,7 +111,7 @@ function TranslatorComponent() {
             </button>
           </form>
 
-          {errorMessage && <h4 style={{ color: 'red', paddingLeft: '510px', marginTop: '40px' }}>{errorMessage}</h4>}
+          {errorMessage && <h4 style={{ color: 'red', paddingLeft: '470px', marginTop: '40px' }}>{errorMessage}</h4>}
           {correctMessage && <h5 style={{ color: 'green', paddingLeft: '480px', marginTop: '40px' }}>{correctMessage}</h5>}
         </Col>
       </Row>

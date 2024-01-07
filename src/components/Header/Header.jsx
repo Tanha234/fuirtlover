@@ -51,7 +51,7 @@ const Header = () => {
               <NavDropdown.Item href="/tan" className='fs-5'>
                Games
               </NavDropdown.Item>
-              <NavDropdown.Item href="/tan" className='fs-5'>
+              <NavDropdown.Item href="/tutorial" className='fs-5'>
                Tutorials
               </NavDropdown.Item>
               </NavDropdown>
