@@ -26,6 +26,8 @@ import April from './components/Months/April';
 import May from './components/Months/May';
 import Fruitsandwater from './components/fruitsandwater';
 import TranslatorComponent from './components/TranslatorComponent ';
+import AnimatedText from './components/Animated';
+import Tutorial from './components/Tutorial';
 
 // import User from './components/User/User';
 
@@ -89,7 +91,10 @@ const router = createBrowserRouter([
         path: "/may",
         element:<May/>,
       },
-     
+     {
+       path:'/tutorial',
+       element:<Tutorial/>,
+     },
      
       {
         path: "/user",
@@ -103,6 +108,10 @@ const router = createBrowserRouter([
       {
         path: "/tan",
         element:<TranslatorComponent/>
+      },
+      {
+        path: "/animated",
+        element:<AnimatedText/>
       },
     ],
   },
