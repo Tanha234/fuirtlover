@@ -2,9 +2,28 @@
 // import {  Col, Row } from 'react-bootstrap';
 
 import {  Col, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const FruitDetail = () => {
+  const navigate = useNavigate(); 
+  const myclick = () => {
+    // Handle the click event for each month
+    console.log("Button clicked for January");
+    navigate('/cooking');
+};
+const myclick1 = () => {
+  // Handle the click event for each month
+  console.log("Button clicked for January");
+  navigate('/tips');
+};
+const myclick2 = () => {
+  // Handle the click event for each month
+  console.log("Button clicked for January");
+  navigate('/health');
+};
   return (
+   
+    
    
 <Row className="pt-5 mx-3 mt-2 pb-5">
 
@@ -23,7 +42,8 @@ const FruitDetail = () => {
      <div>
      <h4 style={{marginLeft:'',color:'green',marginTop:'20px'}}>Fruit Recipes</h4>
   <p style={{marginLeft:''}}>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, laborum?</p>
-  <button style={{marginLeft:'',backgroundColor:'#4f7942',borderRadius:'16%',color:'white',width:'100px'}}>DETAIL</button>
+  <button 
+                     onClick={myclick} style={{marginLeft:'',backgroundColor:'#4f7942',borderRadius:'16%',color:'white',width:'100px'}}>DETAIL</button>
      </div>
    </div>
   
@@ -37,7 +57,7 @@ const FruitDetail = () => {
      <div>
      <h4 style={{marginLeft:'',color:'green',marginTop:'20px'}}>Cooking Tips</h4>
   <p style={{marginLeft:''}}>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, laborum?</p>
-  <button style={{marginLeft:'',backgroundColor:'#4f7942',borderRadius:'16%',color:'white',width:'100px'}}>DETAIL</button>
+  <button onClick={myclick1}  style={{marginLeft:'',backgroundColor:'#4f7942',borderRadius:'16%',color:'white',width:'100px'}}>DETAIL</button>
      </div>
    </div>
   
@@ -51,7 +71,7 @@ const FruitDetail = () => {
      <div>
      <h4 style={{marginLeft:'',color:'green',marginTop:'20px'}}>Health Info</h4>
   <p style={{marginLeft:''}}>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, laborum?</p>
-  <button style={{marginLeft:'',backgroundColor:'#4f7942',borderRadius:'16%',color:'white',width:'100px'}}>DETAIL</button>
+  <button  onClick={myclick2} style={{marginLeft:'',backgroundColor:'#4f7942',borderRadius:'16%',color:'white',width:'100px'}}>DETAIL</button>
      </div>
    </div>
   

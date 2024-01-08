@@ -29,6 +29,9 @@ import TranslatorComponent from './components/TranslatorComponent ';
 import AnimatedText from './components/Animated';
 
 import FruitDetail from './components/FruitDetail';
+import CookingRecipe from './components/CookingRecipe';
+import CookingTips from './components/CookingTips';
+import HealthTips from './components/HealthTips';
 
 // import User from './components/User/User';
 
@@ -113,6 +116,18 @@ const router = createBrowserRouter([
       {
         path: "/animated",
         element:<AnimatedText/>
+      },
+      {
+        path: "/cooking",
+        element:<CookingRecipe/>
+      },
+      {
+        path: "/tips",
+        element:<CookingTips/>
+      },
+      {
+        path: "/health",
+        element:<HealthTips/>
       },
     ],
   },

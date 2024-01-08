@@ -16,7 +16,7 @@ const Header = () => {
   const signnOut = () => {
     signOut(getAuth()).then(() => {
       setUsers(null);
-      <Navigate to='/login'></Navigate>
+      <Navigate to='/home'></Navigate>
     });
   };
 
@@ -38,13 +38,16 @@ const Header = () => {
           </Navbar.Brand>
           <Nav className="me-auto nav">
             <Nav.Link href="/" className='fs-5'>Home</Nav.Link>
-            
             <NavDropdown title="Fruits" className='fs-5 mx-2' id="navbarScrollingDropdown">
             <NavDropdown.Item href="/fruit" className='fs-5'>About Fruits</NavDropdown.Item>
               <NavDropdown.Item href="/season" className='fs-5'>
                 Seasonal Fruits
               </NavDropdown.Item>
               </NavDropdown>
+            <Nav.Link href="/tut" className='fs-5'>NutriCraze</Nav.Link>
+            
+       
+          
               <NavDropdown title="Activites" className='fs-5 mx-2' id="navbarScrollingDropdown">
               <NavDropdown.Item href="/rest" className='fs-5'>Calculate Nuitrition</NavDropdown.Item>
               

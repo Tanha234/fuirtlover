@@ -3,9 +3,10 @@
     width:150px;
 }
 .nav{
-    margin-left: 750px;
+    margin-left: 660px;
 }
 .navi{
     background-color:  #8eab9363;
+    background-position: fixed;
    
 }
