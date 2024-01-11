@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <div className="contact d-flex  contact">
         <div className="col-md-6">
-        <img className='mt-5 pt-5 me-4 img10' src='./../../../images/contact.png'></img>
+        <img className='mt-5 pt-5 me-1 img10 w-50' src='./../../../images/contact.png'></img>
         </div>
     <div className=" col-md-6 pt-5">
         <Row>

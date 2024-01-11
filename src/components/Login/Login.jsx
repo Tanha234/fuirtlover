@@ -16,8 +16,8 @@ const Login = () => {
   const location=useLocation();
   const [isEmailVerified, setIsEmailVerified] = useState(false);
   const emailRef=useState();
-  //private route
-  const form=location.state?.form?.pathname||'/';
+  // //private route
+  // const form=location.state?.form?.pathname||'/';
 
 
 
@@ -44,8 +44,8 @@ const Login = () => {
           setSuccess('Successfully logged in');
           setError('');
           event.target.reset();
-          navigate(form,{replace:true});
-          navigate('/contact');
+       
+          navigate('/');
         })
         .catch((error) => {
           setError('Login failed. ');

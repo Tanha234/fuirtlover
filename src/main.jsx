@@ -32,6 +32,9 @@ import FruitDetail from './components/FruitDetail';
 import CookingRecipe from './components/CookingRecipe';
 import CookingTips from './components/CookingTips';
 import HealthTips from './components/HealthTips';
+import PrivateRoute from './components/PrivateRoute';
+import Profile from './components/Profile';
+import FruitsCatergory from './components/FruitsCatergory';
 
 // import User from './components/User/User';
 
@@ -61,7 +64,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/upload",
-        element:<ImageUpload/>
+        element:<PrivateRoute><ImageUpload/></PrivateRoute>
       },
       {
         path: "/rest",
@@ -107,7 +110,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element:<Contact></Contact>
+        element:<Contact/>
+      },
+      {
+        path: "/profile",
+        element:<Profile/>
       },
       {
         path: "/tan",
@@ -129,6 +136,11 @@ const router = createBrowserRouter([
         path: "/health",
         element:<HealthTips/>
       },
+      {
+        path: "/category",
+        element:<FruitsCatergory/>
+      },
+
     ],
   },
 ]);

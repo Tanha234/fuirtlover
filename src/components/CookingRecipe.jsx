@@ -8,9 +8,9 @@ const CookingRecipe = () => {
         <div>
             <Row >
                 
-            <Col style={{backgroundColor:'rgb(150, 197, 155)',height:'500px',width:'500px',marginTop:'150px'}}className="col-md-4 px-5 mx-5 ">
+            <Col style={{backgroundColor:'rgb(150, 197, 155)',height:'500px',width:'500px',marginTop:'150px',}}className="col-md-4 px-5 mx-5 ">
             
-                <p style={{color:'black',fontFamily:'cursive'}} className="fs-4  pt-5"> Follow these tips for cooking fruit using moist-heat methods: Pears, apples, peaches, nectarines, plums and apricots are commonly poached fruits. Figs, grapes, quince and bananas will also poach nicely. Use just enough liquid to cover the fruit.Fruit-based meals can include fruit salads, smoothie bowls, fruit salsas, and fruit-based desserts like fruit tarts or fruit crumbles</p>
+                <p style={{color:'black',fontFamily:'cursive',}} className="fs-4  pt-5"> Follow these tips for cooking fruit using moist-heat methods: Pears, apples, peaches, nectarines, plums and apricots are commonly poached fruits. Figs, grapes, quince and bananas will also poach nicely. Use just enough liquid to cover the fruit.Fruit-based meals can include fruit salads, smoothie bowls, fruit salsas, and fruit-based desserts like fruit tarts or fruit crumbles</p>
                 </Col>
                
               
