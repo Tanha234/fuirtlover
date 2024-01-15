@@ -42,12 +42,13 @@ const Header = () => {
           <Nav.Link href="/" className='fs-5'>Home</Nav.Link>
           <NavDropdown title="Fruits" className='fs-5 mx-3' id="navbarScrollingDropdown">
             <NavDropdown.Item href="/fruit" className='fs-5'>About Fruits</NavDropdown.Item>
+            <NavDropdown.Item href="/category" className='fs-5'>Fruits Category</NavDropdown.Item>
             <NavDropdown.Item href="/season" className='fs-5'>
               Seasonal Fruits
             </NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/tut" className='fs-5'>NutriCraze</Nav.Link>
-          <Nav.Link href="/category" className='fs-5 mx-3'>Fruits Category</Nav.Link>
+          {/* <Nav.Link href="/category" className='fs-5 mx-3'>Fruits Category</Nav.Link> */}
 
           <NavDropdown title="Activites" className='fs-5 mx-2' id="navbarScrollingDropdown">
             <NavDropdown.Item href="/rest" className='fs-5'>Calculate Nuitrition</NavDropdown.Item>
@@ -66,6 +67,10 @@ const Header = () => {
               Sign In
             </NavDropdown.Item>
           </NavDropdown>
+          <Nav.Link href="/profile" className="logo-link">
+        <img src='../../../images/7554431-removebg-preview.png' alt="Logo" className="logo-image" />
+      </Nav.Link>
+          
         </Nav>
         {user && <span className='me-4'>{user.displayName}</span>}
         {user && <Button className='me-5' onClick={signnOut}>Sign Out</Button>}

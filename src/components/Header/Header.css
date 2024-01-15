@@ -10,4 +10,9 @@
     background-position: fixed;
    
 }
+.logo-image{
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 460px;
+}
 
