@@ -49,6 +49,13 @@ const Header = () => {
           </NavDropdown>
           <Nav.Link href="/tut" className='fs-5'>NutriCraze</Nav.Link>
           {/* <Nav.Link href="/category" className='fs-5 mx-3'>Fruits Category</Nav.Link> */}
+          <NavDropdown title="Users" className='fs-5 mx-3' id="navbarScrollingDropdown">
+            <NavDropdown.Item href="/review" className='fs-5'>Feedback</NavDropdown.Item>
+            <NavDropdown.Item href="/category" className='fs-5'>Fruits Category</NavDropdown.Item>
+            <NavDropdown.Item href="/season" className='fs-5'>
+              Seasonal Fruits
+            </NavDropdown.Item>
+          </NavDropdown>
 
           <NavDropdown title="Activites" className='fs-5 mx-2' id="navbarScrollingDropdown">
             <NavDropdown.Item href="/rest" className='fs-5'>Calculate Nuitrition</NavDropdown.Item>
@@ -61,7 +68,7 @@ const Header = () => {
           </NavDropdown>
           <Nav.Link href="/upload" className='fs-5 mx-2'>Identify Fruit</Nav.Link>
           <Nav.Link href="/contact" className='fs-5 mx-2'>Contact</Nav.Link>
-          <NavDropdown title="User?" className='fs-5 navUser' id="navbarScrollingDropdown">
+          <NavDropdown title="Access" className='fs-5 navUser' id="navbarScrollingDropdown">
             <NavDropdown.Item href="/registration" className='fs-5'>Sign Up</NavDropdown.Item>
             <NavDropdown.Item href="/login" className='fs-5'>
               Sign In

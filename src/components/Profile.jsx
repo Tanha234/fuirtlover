@@ -1,7 +1,7 @@
 import  { useState, useEffect, useContext } from 'react';
 import { AuthContext } from './AuthProvider';
 import defaultProfileImage from '../../images/7554431-removebg-preview.png'; // Import your default image
-import { Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
@@ -42,12 +42,13 @@ const Profile = () => {
 
   return (
     <div>
-      <Row style={{backgroundColor:'rgb(150, 197, 155)',height:'700px',width:'1500px',marginLeft:'240px',marginTop:'50px'}}>
-     
+      
+      <Row style={{backgroundColor:'rgb(150, 197, 155)',height:'700px',width:'1100px',marginLeft:'440px',marginTop:'50px'}}>
+     <Col>
       {user ? (
         <div>
        
-          <img src={image} alt="Profile" style={{ maxWidth: '200px',marginTop:'60px',marginLeft:'100px'}} />
+          <img src={image} alt="Profile" style={{ width: '210px',height:'220px',marginTop:'60px',marginLeft:'160px',marginBottom:'50px',borderRadius:'50%'}} />
           <br/>
 
           <input
@@ -55,21 +56,31 @@ const Profile = () => {
             accept="image/*"
             id="profileImage"
             onChange={handleImageChange}
-            style={{paddingTop:'-180px',marginLeft:'100px'}}
+            style={{paddingTop:'-160px',marginLeft:'100px'}}
           />
 
           {image !== defaultProfileImage && (
-            <button onClick={handleRemoveImage} style={{marginRight:'-200px'}}>Remove Image</button>
+            <button onClick={handleRemoveImage} style={{backgroundColor:'green',color:'white'}}>Remove Image</button>
           )}
-          <p>Welcome, {user.displayName}!</p>
-          <p>Email: {user.email}</p>
+          
 
-         
+          <p className='text-center fs-5 pt-4 text-primary'>Welcome,<span>{user.displayName}!</span> </p>
         </div>
       ) : (
         <p>Please sign in to view your profile.</p>
         
       )}
+      </Col>
+      <Col style={{backgroundColor:'#D3D3D3'}}>
+        <h2 className='pt-4 pb-3'>Information</h2>
+        {/* <hr/>
+        {user ?():(
+          <h5>Email: {user.email}</h5>
+          <p>Please sign in to view your profile.</p>
+        )} */}
+          <h5>Mobile:</h5>
+          <hr/>
+      </Col>
       </Row>
     </div>
   );

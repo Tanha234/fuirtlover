@@ -36,6 +36,9 @@ import PrivateRoute from './components/PrivateRoute';
 import Profile from './components/Profile';
 import FruitsCatergory from './components/FruitsCatergory';
 
+
+import Review from './components/Review/Review';
+
 // import User from './components/User/User';
 
 
@@ -140,6 +143,12 @@ const router = createBrowserRouter([
         path: "/category",
         element:<FruitsCatergory/>
       },
+      {
+        path: "/review",
+        element:<Review/>,
+        loader:()=>fetch('http://localhost:4000/review')
+      },
+
 
     ],
   },
