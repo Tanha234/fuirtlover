@@ -38,6 +38,8 @@ import FruitsCatergory from './components/FruitsCatergory';
 
 
 import Review from './components/Review/Review';
+import Tutorialss from './components/Tutorialss';
+import Youtube from './components/Youtube';
 
 // import User from './components/User/User';
 
@@ -117,7 +119,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element:<Profile/>
+        element:<Profile/>,
+        loader:()=>fetch('http://localhost:4000/upload')
       },
       {
         path: "/tan",
@@ -142,6 +145,14 @@ const router = createBrowserRouter([
       {
         path: "/category",
         element:<FruitsCatergory/>
+      },
+      {
+        path: "/tutorial",
+        element:<Tutorialss/>
+      },
+      {
+        path: "/youtube",
+        element:<Youtube/>
       },
       {
         path: "/review",

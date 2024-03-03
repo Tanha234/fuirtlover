@@ -81,6 +81,7 @@ const Review = () => {
           <Form.Control
             as="textarea"
             name="text"
+            placeholder="Enter your review  (100-150 words)"
             style={{ height: '200px', width: '800px', marginLeft: '1000px', marginTop: '20px' }}
             rows={3}
             value={text}
@@ -126,18 +127,18 @@ const Review = () => {
       <div style={{ borderRadius: '50%', height: '110px', width: '110px', border: '7px solid rgb(150, 197, 155)', marginLeft: '270px', marginTop: '-170px' }} />
       <div style={{ borderRadius: '50%', height: '110px', width: '110px', border: '7px solid rgb(150, 197, 155)', marginLeft: '260px', marginTop: '59px' }} />
       <div style={{ borderRadius: '50%', height: '110px', width: '110px', backgroundColor: 'rgb(150, 197, 155)', marginLeft: '460px', marginTop: '-620px' }} />
-      <h1 style={{ fontFamily: 'cursive', color: 'orange', marginLeft: '910px', marginTop: '600px' }} className="">Users Review:{user.length}</h1>
+      <h1 style={{ fontFamily: 'cursive', color: 'orange', marginLeft: '910px', marginTop: '600px' }} className="pb-5">Users Review:{user.length}</h1>
 
       <div className='d-flex'>
-      <Row  style={{marginLeft:'30px',marginTop:'20px'}} className="justify-content-betwee row-md-2">
+      <Row  style={{marginLeft:'50px',marginTop:'20px'}} className="justify-content-between g-2 ">
   {user.map((user) => (
     <Col  key={user.id}>
-      <Card style={{ width: '32rem', border: '2px solid rgb(150, 197, 155)' }}>
+      <Card style={{ width: '32rem', border: '2px solid rgb(150, 197, 155)',marginTop:'20px' }}>
         
         <Card.Body>
           <Card.Title>{user.name}</Card.Title>
           <Card.Text><span style={{fontStyle:'bold',color:'red'}}>Email:</span>{user.email}</Card.Text>
-          <Card.Text>{user.rating}Star</Card.Text>
+          <Card.Text>{user.text}</Card.Text>
           <div className="d-flex">
             <span>Rating</span>
       <FontAwesomeIcon

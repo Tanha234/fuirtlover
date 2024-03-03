@@ -82,7 +82,7 @@ const Registration = () => {
     // password regex
     const passwordRegex = /^(?=.*[@#$%^&+=])(?=\S+).{4,}$/
     if (!passwordRegex.test(password)) {
-      setError('Password should meet the specified criteria.');
+      setError('Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:');
       return;
     }
 

@@ -392,7 +392,7 @@ Top Favorite Fruits</h1>
         <Col style={{backgroundColor:'   rgb(150, 197, 150)',borderColor:'blue'}} className=' mx-5 px-5'>
      
         <img style={{width:'100px',marginLeft:'90px'}} className='pt-5 mt-5 ' src='./../../../images/eed.png'></img>
-         <h5 className='pt-4 text-white text-center'>Contact with nutritionist</h5>
+         <h5 className='pt-4 text-white text-center'>Games for users</h5>
         </Col>
         
       </Row>

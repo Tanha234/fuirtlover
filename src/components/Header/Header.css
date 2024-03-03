@@ -7,8 +7,8 @@
 }
 .navi{
     background-color:  #8eab9363;
-    background-position: fixed;
-   
+    background-position: sticky;
+    margin-bottom: 50px;   
 }
 .logo-image{
     height: 50px;

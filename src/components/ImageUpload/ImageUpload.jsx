@@ -1,88 +1,91 @@
 import { useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
-// import { useNavigate } from 'react-router-dom';
+import { Row, Col, Spinner } from 'react-bootstrap';
+import img from '../../../images/Screenshot_2023-11-26_152707-removebg-preview (1).png'
+
 const ImageUpload = () => {
-  const defaultImage = './../../../images/cum.jpg'; // Set your default image path
-  const [imageURL, setImageURL] = useState(defaultImage);
-  // const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [prediction, setPrediction] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [imagePreview, setImagePreview] = useState('../../../images/mongo.png');
 
-  const sumbitButton=()=>{
-    alert("Are you sure for uploading?");
-    // navigate('/user');
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedImage(file);
 
+    const previewURL = URL.createObjectURL(file);
+    setImagePreview(previewURL);
+  };
 
-  }
+  const handleImageUpload = () => {
+    setLoading(true);
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
+    const formData = new FormData();
+    formData.append('file', selectedImage);
 
-    const name = event.target.elements.name.value;
-    const imageInput = event.target.elements.image;
+    fetch('http://127.0.0.1:8000/predict', {
+      method: 'POST',
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        setPrediction(result.prediction);
+      })
+      .catch((error) => {
+        console.error('Error uploading image:', error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
-    if (imageInput.files.length > 0) {
-      const imageFile = imageInput.files[0];
-      const reader = new FileReader();
+  const getClassLabel = () => {
+    if (!prediction || !prediction[0]) {
+      return 'No Prediction';
+    }
 
-      reader.onload = () => {
-        const imageDataURL = reader.result;
-        setImageURL(imageDataURL);
+    const classIndex = prediction[0].indexOf(Math.max(...prediction[0]));
+    const classNames = ['Apple', 'Banana', 'Grape', 'Mango', 'Strawberry'];
 
-        const user = { name, image: imageDataURL };
-        console.log(user);
-
-      
-
-        fetch('http://localhost:5001/upload', {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-          },
-          body: JSON.stringify(user),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            if (data.insertedId) {
-              alert('Inserted Successfully');
-              event.target.reset();
-              setImageURL(defaultImage); // Reset to the default image after successful upload
-            }
-          });
-      };
-
-      reader.readAsDataURL(imageFile);
+    if (classIndex >= 0 && classIndex < classNames.length) {
+      return classNames[classIndex];
     } else {
-      // Handle the case where no image is selected
-      console.log('No image selected');
+      return 'Fruit not in dataset';
     }
   };
 
   return (
-    <div>
-      <Row>
-        
-        <Col className='ps-5 ms-5'>
-   
-          <img className='mt-5 pt-5 me-5 pe-5 img10 w-75' src='../../../images/imk.png' alt="Default" />
-          <h1 style={{color:'green',fontFamily:'cursive',fontSize:'30px'}} className="text ms-5">Select an image for identification</h1>
-        </Col>
-        <Col style={{ marginTop: '50px' }}>
-        
-          <form onSubmit={handleFormSubmit}>
-            <Row className="pt-5 mt-5">
-              {imageURL && <img src={imageURL} alt="Selected" style={{ maxWidth: '50%', maxHeight: '500px', marginBottom: '50px',marginLeft:'130px',marginTop:'90px' }} />}
-            </Row>
+    <Row>
+     <Col className='col-md-3 img1'>
+      <img className="  img1" src={img}/>
+    </Col>
+      
+    
+      <Col style={{ marginLeft: '700px' }}>
+        <div>
+          <Row>
+            <img style={{ width: '600px', height: '500px' }} className='mt-5 pt-3 me-5 pe-5 img10  ' src={imagePreview} alt="Default" />
+          </Row>
+          <Row>
+            <input className='mt-5 ms-5 ps-5' type="file" onChange={handleImageChange} />
+            {selectedImage && (
+              <>
+                <button style={{ width: '300px', marginTop: '20px', height: '37px', marginLeft: '130px', backgroundColor: '#639354' }} onClick={handleImageUpload}>
+                  {loading ? 'Please wait...' : 'Predict'}
+                </button>
+                {loading && <div style={{ marginLeft: '190px', marginTop: '5px' }}>Please wait... <Spinner animation="border" role="status" style={{ marginLeft: '5px',color:'black',marginTop:'10px' }} /></div>}
+              </>
+            )}
 
-            <input type="text" name="name" id="name" />
-            <input type="file" name="image" id="image" accept="image/png,image/gif,image/jpg,image/jpeg" />
-
-            <button onClick={sumbitButton}  style={{height:'32px',width:'250px',backgroundColor:'#355e3b',color:'white'}}type="submit">
-              Upload
-            </button>
-          </form>
-        </Col>
-      </Row>
-    </div>
+            {prediction && (
+              <div className='mt-5'>
+                <h3 className='text-primary ms-5'>Prediction Result:The Fruit is {getClassLabel()}</h3>
+            
+              </div>
+            )}
+          </Row>
+        </div>
+      </Col>
+    </Row>
   );
 };
 

@@ -21,14 +21,14 @@ const Contact = () => {
   action="https://formspree.io/f/mayrypww"
   method="POST"
 >
-<input  className="w-75 mb-4 py-2" type="text" name="" placeholder="Enter Your Name" id="" />
+<input  className="w-75 mb-4 py-2" type="text" name="username" placeholder="Enter Your Name" id="" />
               <br/>
              
        
-              <input  className="w-75 mb-4 py-2 " type="email" name="username" placeholder="Enter Your Email" id="userid"required />
+              <input  className="w-75 mb-4 py-2 " type="email" name="useremail" placeholder="Enter Your Email" id="userid"required />
               <br/>
           
-              <input  className="w-75 mb-4 py-2" type="number" name="useremail" placeholder="Enter Your mobile number" id="emailid" required />
+              <input  className="w-75 mb-4 py-2" type="tel" name="userPhone" placeholder="Enter Your mobile number" id="emailid" required />
               <br/>
              
               <br/>

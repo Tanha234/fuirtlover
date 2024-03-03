@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar className='py-4 ps-5 navi sticky'>
+      <Navbar className='py-4 ps-5 '>
         <Navbar.Brand>
           <div>
             <img className='img_fit' src="./../../../images/logo.png" alt="Logo" />
@@ -51,10 +51,7 @@ const Header = () => {
           {/* <Nav.Link href="/category" className='fs-5 mx-3'>Fruits Category</Nav.Link> */}
           <NavDropdown title="Users" className='fs-5 mx-3' id="navbarScrollingDropdown">
             <NavDropdown.Item href="/review" className='fs-5'>Feedback</NavDropdown.Item>
-            <NavDropdown.Item href="/category" className='fs-5'>Fruits Category</NavDropdown.Item>
-            <NavDropdown.Item href="/season" className='fs-5'>
-              Seasonal Fruits
-            </NavDropdown.Item>
+        
           </NavDropdown>
 
           <NavDropdown title="Activites" className='fs-5 mx-2' id="navbarScrollingDropdown">
@@ -79,7 +76,7 @@ const Header = () => {
       </Nav.Link>
           
         </Nav>
-        {user && <span className='me-4'>{user.displayName}</span>}
+        {user && <span className='me-5'>{user.displayName}</span>}
         {user && <Button className='me-5' onClick={signnOut}>Sign Out</Button>}
       </Navbar>
     </div>
